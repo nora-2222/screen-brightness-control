@@ -1,0 +1,19 @@
+[package]
+name = "brightness-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Windows monitor brightness control via DDC/CI or software overlay"
+readme = "../../README.md"
+
+[dependencies]
+thiserror.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.62", features = [
+    "Win32_Devices_Display",
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_System_LibraryLoader",
+    "Win32_UI_WindowsAndMessaging",
+] }

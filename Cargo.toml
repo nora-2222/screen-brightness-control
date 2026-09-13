@@ -1,0 +1,14 @@
+[workspace]
+members = ["crates/brightness-core", "crates/brightness-cli"]
+exclude = ["crates/brightness-prototype"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+repository = "https://github.com/nora-2222/screen-brightness-control"
+
+[workspace.dependencies]
+thiserror = "2"
+clap = { version = "4", features = ["derive"] }
